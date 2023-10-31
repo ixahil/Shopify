@@ -19,7 +19,7 @@ export default async function Footer() {
   return (
     <footer className="bg-[#333333] text-sm text-text-primary dark:text-neutral-400">
       <div className="mx-auto flex w-full max-w-7xl flex-col items-center justify-between gap-6 border-t border-neutral-200 px-6 py-10 text-sm dark:border-neutral-700 md:flex-row md:justify-between md:px-4 min-[1320px]:px-0">
-        <div className="w-1/4">
+        <div className="w-full md:w-1/4">
           <Link
             className="flex flex-col items-center justify-between gap-2 text-text-primary dark:text-white md:pt-1"
             href="/"
@@ -35,7 +35,7 @@ export default async function Footer() {
             </p>
           </Link>
         </div>
-        <div className="flex w-1/3 justify-between">
+        <div className="flex w-full justify-between md:w-1/3">
           <Suspense
             fallback={
               <div className="flex h-[188px] w-[200px] flex-col gap-2">

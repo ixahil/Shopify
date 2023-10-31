@@ -34,9 +34,9 @@ const ImageCarousel = ({ images }: prop) => {
               alt={'image' + index}
               key={'image' + index}
               layout="responsive" // Set the layout to "responsive"
-              width={1000} // Adjust the width to a value suitable for your design
-              height={750} // Adjust the height to a value suitable for your design
-              className="h-full w-screen"
+              objectFit="cover"
+              sizes="(min-width: 1024px) 100vw, (min-width: 768px) 100vw, 100vw"
+              className="h-full w-screen "
             />
           );
         })}

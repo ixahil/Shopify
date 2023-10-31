@@ -22,7 +22,7 @@ export function ProductDescription({ product }: { product: Product }) {
         <h1 className="mb-2 text-5xl font-medium">
           {product.title}
 
-          {selectedOption && '  -  '}
+          {selectedOption ? '  -  ' : <></>}
           {selectedOption}
         </h1>
         <div className="mr-auto w-auto rounded-full bg-accent p-2 text-sm text-white">
@@ -33,15 +33,16 @@ export function ProductDescription({ product }: { product: Product }) {
         </div>
       </div>
       <VariantSelector options={product.options} variants={product.variants} />
-
-      {product.descriptionHtml ? (
-        <Prose
-          className="mb-6 text-sm leading-tight dark:text-white/[60%]"
-          html={product.descriptionHtml}
-        />
-      ) : null}
-
       <AddToCart variants={product.variants} availableForSale={product.availableForSale} />
+      <div className="mb-6 flex flex-col border-b pb-6 dark:border-neutral-700">
+        <h2 className="border-b py-16 pb-6 text-4xl dark:border-neutral-700">Description</h2>
+        {product.descriptionHtml ? (
+          <Prose
+            className="mb-6 text-sm leading-tight dark:text-white/[60%]"
+            html={product.descriptionHtml}
+          />
+        ) : null}
+      </div>
     </>
   );
 }

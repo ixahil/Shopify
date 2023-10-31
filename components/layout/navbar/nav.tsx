@@ -18,7 +18,7 @@ const Nav = ({ menu }: Props) => {
             <Link
               key={item.title}
               href={item.path}
-              className={`h-full w-full text-center text-neutral-500 underline-offset-4 hover:bg-accent hover:text-text-primary hover:underline  dark:text-white dark:hover:text-neutral-300 ${
+              className={`h-full w-full text-center text-neutral-500 underline-offset-4 transition duration-150 ease-out hover:bg-accent 	 hover:text-text-primary hover:underline hover:ease-in  dark:text-white dark:hover:text-neutral-300 ${
                 item.title === 'SALE' ? 'text-text-primary' : ''
               }${pathName === item.path && 'bg-accent text-text-primary underline'}`}
             >

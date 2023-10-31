@@ -74,7 +74,7 @@ export default async function Navbar() {
               <Search />
             </div>
 
-            <div className="flex items-center justify-end gap-8 md:w-1/3">
+            <div className="flex items-center justify-end gap-2 text-sm md:w-1/3 md:gap-8 md:text-xl ">
               <Link
                 className="text-accent"
                 href={'https://skates-world-india.myshopify.com/account/login'}

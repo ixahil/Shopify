@@ -64,11 +64,11 @@ export async function Carousel() {
     <>
       <h1 className="bold w-full py-8 pt-16 text-center text-4xl font-bold">FEATURED COLLECTION</h1>
       <div className="slider-parent flex gap-4 py-16">
-        <div className="slider flex gap-4">
+        <div className="slider flex w-full gap-4">
           {carouselProducts.map((product, i) => (
             <div
               key={`${product.handle}${i}`}
-              className="slider-item relative  aspect-square h-[30vh] max-h-[275px] w-3/4 max-w-[475px] flex-none md:w-1/3"
+              className="slider-item relative  aspect-square h-[30vh] max-h-[275px] w-2/4 max-w-[475px] flex-none md:w-1/3"
             >
               <Link href={`/product/${product.handle}`} className="relative h-full w-full">
                 <GridTileImage

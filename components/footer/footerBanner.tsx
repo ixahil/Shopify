@@ -6,8 +6,8 @@ import FooterBannerImage from 'public/images/footer-banner.webp';
 const FooterBanner = () => {
   return (
     <>
-      <div className="mx-auto grid w-[80%] grid-cols-2 gap-16 py-32">
-        <div className=" text-6xl">SOMETHING UNIQUE FOR EVERYBODY</div>
+      <div className="mx-auto grid w-[80%] grid-cols-1 gap-16 py-32 md:grid-cols-2">
+        <div className="text-3xl md:text-6xl">SOMETHING UNIQUE FOR EVERYBODY</div>
         <div className=" flex flex-col items-start gap-8">
           <div className=" text-justify">
             Whether you’re an adult or a child, Skate Supply has something for everybody. Our
@@ -30,21 +30,21 @@ const FooterBanner = () => {
           alt="footer-banner"
           fill
           objectFit="cover"
-          objectPosition="0% 6%"
           sizes="100vw"
+          className="object-top"
         />
       </div>
       <div className="bg-[#dcdcdc]">
-        <div className="mx-auto grid w-[80%] grid-cols-2 items-center justify-center gap-16 py-32">
-          <div className="w-1/1 relative inline-block text-6xl">
+        <div className="mx-auto grid w-[80%] grid-cols-1 items-center justify-center gap-16 py-32 md:grid-cols-2">
+          <div className="w-1/1 relative inline-block text-3xl md:text-6xl">
             SIGN UP FOR SPECIAL OFFERS AND DISCOUNT{' '}
             <ArrowLongRightIcon className="absolute right-0 top-5 h-12 w-12" color="#e64b38" />
           </div>
 
-          <div className="flex w-1/3 flex-row items-center gap-8">
+          <div className="flex w-1/3 flex-row items-center gap-8 ">
             <input
               type="email"
-              className="border-b-2 border-accent bg-[#dcdcdc] px-32 py-1 focus:bg-none"
+              className="border-b-2 border-accent bg-[#dcdcdc] px-0 py-1 focus:bg-none md:px-32"
               placeholder="email@coolman.com"
             />
             <button className="ml-auto self-end rounded-full border-2 border-accent bg-accent px-4 py-2 text-text-primary shadow-xl hover:bg-transparent hover:text-black">

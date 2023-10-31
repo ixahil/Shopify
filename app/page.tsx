@@ -4,8 +4,8 @@ import FooterBanner from 'components/footer/footerBanner';
 import { getCollectionProducts } from 'lib/shopify';
 import Image from 'next/image';
 import Link from 'next/link';
+import FeaturedBanner from 'public/images/banner-featured.png';
 import PlaceHolder from 'public/images/placeHolder.jpg';
-import ProductBanner from 'public/images/product-banner.jpg';
 import { Suspense } from 'react';
 
 export const runtime = 'edge';
@@ -26,8 +26,29 @@ export default async function HomePage() {
         <BannerCarousel />
         <Carousel />
         <div className="grid h-full grid-cols-2 grid-rows-2 gap-0">
-          <div id="item-0" className="relative col-start-2 col-end-3 row-start-1 row-end-3">
-            <Image src={ProductBanner} fill objectFit="fill" alt="product-banner" />
+          <div
+            id="item-0"
+            className="relative col-start-2 col-end-3 row-start-1 row-end-3 bg-[#ebebeb] pt-32"
+          >
+            {/* <div className="rotate-[-5deg] text-center">
+              <h1 className="w-full bg-white p-4 text-8xl font-extrabold italic text-accent">
+                FIRST
+              </h1>
+            </div>
+            <div className="rotate-[-5deg] pb-16 text-center">
+              <h1 className="p-2 text-8xl font-extrabold italic text-black">OF ITS KIND</h1>
+            </div>
+            <br></br>
+            <h3 className="p-2 text-center text-2xl font-extrabold italic text-accent">
+              GLOBAL BRANDS OFFICIALLY SELL IN INDIA
+            </h3> */}
+
+            <Image
+              src={FeaturedBanner}
+              fill
+              alt="product-banner"
+              className="h-1/2 object-contain md:h-full md:w-full md:object-contain"
+            />
           </div>
           <div id="item-1" className="relative col-start-1 col-end-2 row-start-1 row-end-2 py-4">
             <div className=" flex flex-col items-center">
@@ -42,8 +63,8 @@ export default async function HomePage() {
                     alt="product-banner"
                     width={100}
                     height={100}
-                    sizes="100vw"
-                    className="h-1/5 transform transition-transform group-hover:scale-125"
+                    sizes="(min-width: 1024px) 25vw, (min-width: 768px) 33vw, 50vw"
+                    className="h-1/4 w-1/4 transform transition-transform group-hover:scale-125 md:h-auto md:w-1/4"
                   />
                   <div
                     className={'flex w-full flex-col items-center justify-center gap-4 px-4 py-4'}
@@ -78,8 +99,8 @@ export default async function HomePage() {
                     alt="product-banner"
                     width={100}
                     height={100}
-                    sizes="100vw"
-                    className="h-1/5 transform transition-transform group-hover:scale-125"
+                    sizes="(min-width: 1024px) 25vw, (min-width: 768px) 33vw, 50vw"
+                    className="h-1/4 w-1/4 transform transition-transform group-hover:scale-125 md:h-auto md:w-1/4"
                   />
                   <div
                     className={'flex w-full flex-col items-center justify-center gap-4 px-4 py-4'}
