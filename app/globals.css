@@ -34,7 +34,7 @@ button {
   white-space: nowrap;
   position: relative;
 }
-
+/* 
 .slider-parent::before,
 .slider-parent::after {
   position: absolute;
@@ -54,7 +54,7 @@ button {
 .slider-parent::after {
   right: 0;
   background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
-}
+} */
 
 .slider {
   animation: slider 20s infinite linear;

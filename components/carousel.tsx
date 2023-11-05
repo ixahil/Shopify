@@ -63,12 +63,12 @@ export async function Carousel() {
   return (
     <>
       <h1 className="bold w-full py-8 pt-16 text-center text-4xl font-bold">FEATURED COLLECTION</h1>
-      <div className="slider-parent flex gap-4 py-16">
-        <div className="slider flex w-full gap-4">
+      <div className="slider-parent flex gap-0 py-16">
+        <div className="slider flex w-full gap-0">
           {carouselProducts.map((product, i) => (
             <div
               key={`${product.handle}${i}`}
-              className="slider-item relative  aspect-square h-[30vh] max-h-[275px] w-2/4 max-w-[475px] flex-none md:w-1/3"
+              className="slider-item relative aspect-square w-1/2 flex-none md:w-1/6"
             >
               <Link href={`/product/${product.handle}`} className="relative h-full w-full">
                 <GridTileImage
@@ -80,27 +80,7 @@ export async function Carousel() {
                   }}
                   src={product.featuredImage?.url}
                   fill
-                  sizes="(min-width: 1024px) 25vw, (min-width: 768px) 33vw, 50vw"
-                />
-              </Link>
-            </div>
-          ))}
-          {carouselProducts.map((product, i) => (
-            <div
-              key={`${product.handle}${i}`}
-              className="slider-item relative  aspect-square h-[30vh] max-h-[275px] w-3/4 max-w-[475px] flex-none md:w-1/3"
-            >
-              <Link href={`/product/${product.handle}`} className="relative h-full w-full">
-                <GridTileImage
-                  alt={product.title}
-                  label={{
-                    title: product.title,
-                    amount: product.priceRange.maxVariantPrice.amount,
-                    currencyCode: product.priceRange.maxVariantPrice.currencyCode
-                  }}
-                  src={product.featuredImage?.url}
-                  fill
-                  sizes="(min-width: 1024px) 25vw, (min-width: 768px) 33vw, 50vw"
+                  sizes="(min-width: 1024px) 25vw, (min-width: 768px) 33vw, (max-width:768px) 25vw"
                 />
               </Link>
             </div>

@@ -17,6 +17,8 @@ export default function ProductGridItems({ products }: { products: Product[] }) 
                 currencyCode: product.priceRange.maxVariantPrice.currencyCode
               }}
               src={product.featuredImage?.url}
+              blurDataURL={product.featuredImage?.url}
+              placeholder="blur"
               fill
               sizes="(min-width: 768px) 33vw, (min-width: 640px) 50vw, 100vw"
             />

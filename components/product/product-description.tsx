@@ -38,7 +38,7 @@ export function ProductDescription({ product }: { product: Product }) {
         <h2 className="border-b py-16 pb-6 text-4xl dark:border-neutral-700">Description</h2>
         {product.descriptionHtml ? (
           <Prose
-            className="mb-6 text-sm leading-tight dark:text-white/[60%]"
+            className="mx-6 text-sm leading-tight dark:text-white/[60%]"
             html={product.descriptionHtml}
           />
         ) : null}

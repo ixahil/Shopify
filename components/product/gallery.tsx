@@ -37,6 +37,8 @@ export function Gallery({ images }: { images: { src: string; altText: string }[]
             alt={images[imageIndex]?.altText as string}
             src={images[imageIndex]?.src as string}
             priority={true}
+            placeholder="blur"
+            blurDataURL={images[imageIndex]?.src}
           />
         )}
 
@@ -84,6 +86,8 @@ export function Gallery({ images }: { images: { src: string; altText: string }[]
                   <GridTileImage
                     alt={image.altText}
                     src={image.src}
+                    blurDataURL={image.src}
+                    placeholder="blur"
                     width={80}
                     height={80}
                     active={isActive}
